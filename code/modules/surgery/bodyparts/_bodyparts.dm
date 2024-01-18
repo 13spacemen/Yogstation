@@ -855,7 +855,8 @@
 			skin_tone = ""
 
 		body_gender = H.gender
-		should_draw_gender = S.sexes
+		if(S.is_dimorphic)
+			should_draw_gender = S.sexes
 		use_damage_color = S.use_damage_color
 
 		if((MUTCOLORS in S.species_traits) || (DYNCOLORS in S.species_traits))
@@ -931,7 +932,7 @@
 
 	var/icon_gender = (body_gender == FEMALE) ? "f" : "m" //gender of the icon, if applicable
 
-	if((body_zone != BODY_ZONE_HEAD && body_zone != BODY_ZONE_CHEST))
+	if(((body_zone != BODY_ZONE_HEAD && body_zone != BODY_ZONE_CHEST )))
 		should_draw_gender = FALSE
 
 	if(status == BODYPART_ORGANIC || (status == BODYPART_ROBOTIC && render_like_organic == TRUE)) // So IPC augments can be colorful without disrupting normal BODYPART_ROBOTIC render code.
