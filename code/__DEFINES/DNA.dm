@@ -99,7 +99,7 @@
 #define DNA_HAIR_STYLE_BLOCK		7
 
 /// This number needs to equal the total number of DNA blocks
-#define DNA_FEATURE_BLOCKS 19
+#define DNA_FEATURE_BLOCKS 24
 
 #define DNA_MUTANT_COLOR_BLOCK 1
 #define DNA_ETHEREAL_COLOR_BLOCK 2
@@ -121,6 +121,11 @@
 #define DNA_POLY_DOME_BLOCK 17
 #define DNA_POLY_DORSAL_BLOCK 18
 #define DNA_ETHEREAL_MARK_BLOCK 19
+#define DNA_VOX_QUILLS_BLOCK 20
+#define DNA_VOX_FACIAL_QUILLS_BLOCK 21
+#define DNA_VOX_TAIL_MARKINGS_BLOCK 22
+#define DNA_VOX_BODY_MARKINGS_BLOCK 23
+#define DNA_VOX_BODY_BLOCK 24
 
 #define DNA_SEQUENCE_LENGTH			4
 #define DNA_MUTATION_BLOCKS			8
@@ -185,6 +190,8 @@
 /// has a tail
 #define HAS_TAIL		27
 #define NONANITES		28
+#define HAIRCOLOR		29
+#define FACEHAIRCOLOR	30
 
 //organ slots
 #define ORGAN_SLOT_BRAIN "brain"

@@ -119,3 +119,28 @@ export const feature_ethereal_mark: FeatureChoiced = {
   name: "Mark",
   component: FeatureDropdownInput,
 };
+
+export const feature_vox_quills: FeatureChoiced = {
+  name: 'Quillstyle',
+  component: FeatureDropdownInput,
+};
+
+export const feature_vox_facial_quills: FeatureChoiced = {
+  name: 'Facial hair',
+  component: FeatureDropdownInput,
+};
+
+export const feature_vox_tail_markings: FeatureChoiced = {
+  name: 'Spines',
+  component: FeatureDropdownInput,
+};
+
+export const feature_vox_body_markings: FeatureChoiced = {
+  name: 'Body markings',
+  component: FeatureDropdownInput,
+};
+
+export const feature_vox_body: FeatureChoiced = {
+  name: 'Body',
+  component: FeatureDropdownInput,
+};
