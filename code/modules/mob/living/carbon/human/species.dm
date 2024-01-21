@@ -131,6 +131,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/grab_sound
 	///yogs - audio of a species' scream
 	var/screamsound
+	var/cough_sound
+	var/sneeze_sound
+	var/husk_id = "husk"
 	///is a flying species, just a check for some things
 	var/flying_species = FALSE
 	///the actual flying ability given to flying species
@@ -314,6 +317,12 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 /datum/species/proc/has_toes()
 	return FALSE
+
+/datum/species/proc/on_husk()
+	return
+
+/datum/species/proc/on_husk_cure()
+	return
 
 /**
  * Corrects organs in a carbon, removing ones it doesn't need and adding ones it does.
