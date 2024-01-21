@@ -27,6 +27,7 @@
 	var/damage_deflection = 0
 
 	var/resistance_flags = NONE // INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ON_FIRE | UNACIDABLE | ACID_PROOF
+	var/custom_fire_overlay // Update_fire_overlay will check if a different icon state should be used
 
 	var/acid_level = 0 //how much acid is on that obj
 
