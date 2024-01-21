@@ -62,6 +62,10 @@
 	var/limbs_id // The limbs id supplied for full-body replacing features.
 	var/center = FALSE	//Should we center the sprite?
 	var/color_blend_mode = "multiply"
+	///the body slots outside of the main slot this accessory exists in, so we can draw to those spots seperately
+	var/list/body_slots = list()
+	/// the list of external organs covered
+	var/list/external_slots = list()
 
 //////////////////////
 // Hair Definitions //
@@ -2881,29 +2885,35 @@
 
 /datum/sprite_accessory/vox_body_markings
 	icon = 'icons/mob/species/vox/body_markings.dmi'
+	color_blend_mode = "add"
 
 /datum/sprite_accessory/vox_body_markings/none
 	name = "None"
-	icon_state = "none"
 
 /datum/sprite_accessory/vox_body_markings/heart
 	name = "Heart"
 	icon_state = "heart"
+	body_slots = list(BODY_ZONE_R_ARM)
 
 /datum/sprite_accessory/vox_body_markings/hive
 	name = "Hive"
 	icon_state = "hive"
+	body_slots = list(BODY_ZONE_CHEST)
 
 /datum/sprite_accessory/vox_body_markings/nightling
 	name = "Nightling"
 	icon_state = "nightling"
+	body_slots = list(BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
 
-/datum/sprite_accessory/vox_body_markings/tiger
-	name = "Tiger"
+/datum/sprite_accessory/vox_body_markings/tiger_body
+	name = "Tiger-stripe"
 	icon_state = "tiger"
+	body_slots = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 
 /datum/sprite_accessory/vox_tail_markings
 	icon = 'icons/mob/species/vox/tail_markings.dmi'
+	color_src = MUTCOLORS_SECONDARY
+	color_blend_mode = "add"
 
 /datum/sprite_accessory/vox_tail_markings/none
 	name = "None"
@@ -2923,6 +2933,8 @@
 
 /datum/sprite_accessory/vox_tail_markings_animated
 	icon = 'icons/mob/species/vox/tail_markings.dmi'
+	color_src = MUTCOLORS_SECONDARY
+	color_blend_mode = "add"
 
 /datum/sprite_accessory/vox_tail_markings_animated/none
 	name = "None"
