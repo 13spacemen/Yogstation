@@ -1269,7 +1269,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				standing += inner_accessory_overlay
 			if(length(huskifying))
 				for(var/image/sprite_image as anything in standing)
-					huskify_image(sprite_image, H)
+					huskify_image(sprite_image, H, draw_blood = FALSE)
 					sprite_image.color = H.dna.species.husk_color
 		H.overlays_standing[layer] = standing.Copy()
 		standing = list()
