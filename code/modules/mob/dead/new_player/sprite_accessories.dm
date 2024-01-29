@@ -2959,7 +2959,7 @@
 	color_src = NONE
 
 /datum/sprite_accessory/vox_tails/green
-	name = "Green"
+	name = "green"
 	icon_state = "green"
 
 /datum/sprite_accessory/tails_animated/vox
@@ -2967,7 +2967,7 @@
 	color_src = NONE
 
 /datum/sprite_accessory/tails_animated/vox/green
-	name = "Green"
+	name = "green"
 	icon_state = "green"
 
 /*/datum/sprite_accessory/vox_tails/dgrvox
