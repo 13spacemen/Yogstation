@@ -2727,7 +2727,7 @@
 // Vox Accessories
 
 /datum/sprite_accessory/vox_quills
-	icon = 'icons/mob/species/vox/hair.dmi'
+	icon = 'icons/mob/species/vox/quills.dmi'
 	color_src = HAIR
 	color_blend_mode = "add"
 
@@ -2752,7 +2752,7 @@
 	icon_state = "keetquills"
 
 /datum/sprite_accessory/vox_quills/shortquills
-	name = "Short quills"
+	name = "Short Quills"
 	icon_state = "shortquills"
 
 /datum/sprite_accessory/vox_quills/tielquills
@@ -2764,12 +2764,12 @@
 	icon_state = "kingly"
 
 /datum/sprite_accessory/vox_quills/afro
-	name = "Afro Quills"
+	name = "Fluffy Quills"
 	icon_state = "afro"
 
 /datum/sprite_accessory/vox_quills/yasu
 	name = "Yasu Quills"
-	icon_state = "yasu"
+	icon_state = "yasuhiro"
 
 /datum/sprite_accessory/vox_quills/razor
 	name = "Razor Quills"
@@ -2792,7 +2792,7 @@
 	icon_state = "nights"
 
 /datum/sprite_accessory/vox_facial_quills
-	icon = 'icons/mob/species/vox/facial_hair.dmi'
+	icon = 'icons/mob/species/vox/facial_quills.dmi'
 	color_src = FACEHAIR
 	color_blend_mode = "add"
 
@@ -2801,11 +2801,11 @@
 	icon_state = "none"
 
 /datum/sprite_accessory/vox_facial_quills/colonel
-	name = "Colonel Beard"
+	name = "Colonel"
 	icon_state = "colonel"
 
 /datum/sprite_accessory/vox_facial_quills/fu
-	name = "Fu Beard"
+	name = "Fu"
 	icon_state = "fu"
 
 /datum/sprite_accessory/vox_facial_quills/neck
@@ -2813,8 +2813,12 @@
 	icon_state = "neck"
 
 /datum/sprite_accessory/vox_facial_quills/beard
-	name = "Beard"
+	name = "Quill Beard"
 	icon_state = "beard"
+
+/datum/sprite_accessory/vox_facial_quills/mane
+	name = "Mane Beard"
+	icon_state = "mane"
 
 /datum/sprite_accessory/vox_tails
 	icon = 'icons/mob/species/vox/tails.dmi'
@@ -2855,10 +2859,7 @@
 /datum/sprite_accessory/vox_tails/aurvox
 	name = "aurvox"
 	icon_state = "aurvox"
-
-/datum/sprite_accessory/vox_tails/voxhusk
-	name = "voxhusk"
-	icon_state = "voxhusk"*/
+*/
 
 /datum/sprite_accessory/vox_body_markings
 	icon = 'icons/mob/species/vox/body_markings.dmi'
@@ -2900,9 +2901,9 @@
 	name = "Bands"
 	icon_state = "bands"
 
-/datum/sprite_accessory/vox_tail_markings/fade
-	name = "Fade"
-	icon_state = "fade"
+/datum/sprite_accessory/vox_tail_markings/tip
+	name = "Tip"
+	icon_state = "tip"
 
 /datum/sprite_accessory/vox_tail_markings/stripe
 	name = "Stripe"
@@ -2921,9 +2922,9 @@
 	name = "Bands"
 	icon_state = "bands"
 
-/datum/sprite_accessory/vox_tail_markings_animated/fade
-	name = "Fade"
-	icon_state = "fade"
+/datum/sprite_accessory/vox_tail_markings_animated/tip
+	name = "Tip"
+	icon_state = "tip"
 
 /datum/sprite_accessory/vox_tail_markings_animated/stripe
 	name = "Stripe"
