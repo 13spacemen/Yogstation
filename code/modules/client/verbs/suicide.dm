@@ -110,8 +110,9 @@
 			suicide_messages = harm_suicide_messages.Copy()
 		
 		suicide_messages |= dna?.species?.suicide_messages
+		var/chosen_message = pick(suicide_messages)
 
-		visible_message(span_danger("[pick(suicide_messages)]"), span_userdanger("[pick(suicide_messages)]"))
+		visible_message(span_danger("[chosen_message]"), span_userdanger("[chosen_message]"))
 
 		suicide_log()
 
