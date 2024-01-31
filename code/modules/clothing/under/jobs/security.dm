@@ -114,7 +114,6 @@
 	can_adjust = FALSE
 	fitted = FEMALE_UNIFORM_TOP
 	mutantrace_variation = NO_MUTANTRACE_VARIATION
-	sprite_sheets = null
 
 /*
  * Head of Security
@@ -157,7 +156,6 @@
 	desc = "A stylish alternative to the normal head of security jumpsuit, complete with tactical pants."
 	icon_state = "hosalt"
 	item_state = "bl_suit"
-	sprite_sheets = null
 
 /obj/item/clothing/under/rank/head_of_security/alt/skirt
 	name = "head of security's turtleneck skirt"
@@ -179,8 +177,6 @@
 	icon_state = "officerblueclothes"
 	item_state = "officerblueclothes"
 	alt_covers_chest = TRUE
-	sprite_sheets = null
-
 
 /obj/item/clothing/under/rank/head_of_security/navyblue
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Head of Security."
@@ -188,8 +184,6 @@
 	icon_state = "hosblueclothes"
 	item_state = "hosblueclothes"
 	alt_covers_chest = TRUE
-	sprite_sheets = null
-
 
 /obj/item/clothing/under/rank/warden/navyblue
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
@@ -197,7 +191,6 @@
 	icon_state = "wardenblueclothes"
 	item_state = "wardenblueclothes"
 	alt_covers_chest = TRUE
-	sprite_sheets = null
 
 /*
  *Blueshirt
@@ -209,7 +202,6 @@
 	icon_state = "blueshift"
 	item_state = "blueshift"
 	can_adjust = FALSE
-	sprite_sheets = null
 
 /*
  *Spacepol
@@ -221,7 +213,6 @@
 	icon_state = "spacepol"
 	item_state = "spacepol"
 	can_adjust = FALSE
-	sprite_sheets = null
 
 /*
  *Constable
@@ -232,5 +223,4 @@
 	desc = "A pale blue and black uniform supposedly made from 90% Space Indian cotton."
 	icon_state = "secconuniform"
 	item_state = "secconuniform"
-	sprite_sheets = null
 	

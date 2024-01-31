@@ -34,7 +34,6 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 10, RAD = 0, FIRE = 0, ACID = 0)
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
-	sprite_sheets = null
 
 /obj/item/clothing/under/rank/research_director/alt/skirt
 	name = "research director's tan suitskirt"
@@ -54,7 +53,6 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 10, RAD = 0, FIRE = 0, ACID = 0)
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
-	sprite_sheets = null
 
 /obj/item/clothing/under/rank/research_director/turtleneck/skirt
 	name = "research director's turtleneck skirt"
@@ -91,7 +89,6 @@
 	name = "black scientist's jumpsuit"
 	desc = "A customized black jumpsuit with a bit of purple added to it, it smells rather burnt. It has markings that denote the wearer as a scientist, and provides minor protection against explosions."
 	icon_state = "toxins_black"
-	sprite_sheets = null
 
 /obj/item/clothing/under/rank/chemist
 	desc = "It's made of a special fiber that gives special protection against biohazards. It has a chemist rank stripe on it."
