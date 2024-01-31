@@ -11,6 +11,9 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/under/rnd.dmi',
+	)
 
 /obj/item/clothing/under/rank/research_director/skirt
 	name = "research director's vest suitskirt"
@@ -31,6 +34,7 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 10, RAD = 0, FIRE = 0, ACID = 0)
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
+	sprite_sheets = null
 
 /obj/item/clothing/under/rank/research_director/alt/skirt
 	name = "research director's tan suitskirt"
@@ -50,6 +54,7 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 10, RAD = 0, FIRE = 0, ACID = 0)
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
+	sprite_sheets = null
 
 /obj/item/clothing/under/rank/research_director/turtleneck/skirt
 	name = "research director's turtleneck skirt"
@@ -68,6 +73,9 @@
 	item_state = "w_suit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 10, BIO = 15, RAD = 0, FIRE = 0, ACID = 0)
 	mutantrace_variation = MUTANTRACE_VARIATION
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/under/rnd.dmi',
+	)
 
 /obj/item/clothing/under/rank/scientist/skirt
 	name = "scientist's jumpskirt"
@@ -83,6 +91,7 @@
 	name = "black scientist's jumpsuit"
 	desc = "A customized black jumpsuit with a bit of purple added to it, it smells rather burnt. It has markings that denote the wearer as a scientist, and provides minor protection against explosions."
 	icon_state = "toxins_black"
+	sprite_sheets = null
 
 /obj/item/clothing/under/rank/chemist
 	desc = "It's made of a special fiber that gives special protection against biohazards. It has a chemist rank stripe on it."
@@ -91,6 +100,9 @@
 	item_state = "w_suit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 15, RAD = 0, FIRE = 50, ACID = 65)
 	mutantrace_variation = MUTANTRACE_VARIATION
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/under/medical.dmi',
+	)
 
 /obj/item/clothing/under/rank/chemist/skirt
 	name = "chemist's jumpskirt"
@@ -114,6 +126,9 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/under/medical.dmi',
+	)
 
 /obj/item/clothing/under/rank/chief_medical_officer/skirt
 	name = "chief medical officer's jumpskirt"
@@ -133,6 +148,9 @@
 	item_state = "w_suit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 15, RAD = 0, FIRE = 0, ACID = 0)
 	mutantrace_variation = MUTANTRACE_VARIATION
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/under/rnd.dmi',
+	)
 
 /obj/item/clothing/under/rank/geneticist/skirt
 	name = "geneticist's jumpskirt"
@@ -151,6 +169,9 @@
 	item_state = "w_suit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 15, RAD = 0, FIRE = 0, ACID = 0)
 	mutantrace_variation = MUTANTRACE_VARIATION
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/under/medical.dmi',
+	)
 
 /obj/item/clothing/under/rank/virologist/skirt
 	name = "virologist's jumpskirt"
@@ -171,6 +192,9 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	fitted = NO_FEMALE_UNIFORM
 	can_adjust = FALSE
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/under/medical.dmi',
+	)
 
 /obj/item/clothing/under/rank/medical
 	desc = "It's made of a special fiber that provides minor protection against biohazards. It has a cross on the chest denoting that the wearer is trained medical personnel."
@@ -179,6 +203,9 @@
 	item_state = "w_suit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 15, RAD = 0, FIRE = 0, ACID = 0)
 	mutantrace_variation = MUTANTRACE_VARIATION
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/under/medical.dmi',
+	)
 
 /obj/item/clothing/under/rank/medical/blue
 	name = "medical scrubs"
