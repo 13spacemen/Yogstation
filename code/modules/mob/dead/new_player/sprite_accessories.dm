@@ -62,7 +62,7 @@
 	var/limbs_id // The limbs id supplied for full-body replacing features.
 	var/center = FALSE	//Should we center the sprite?
 	var/emissive = FALSE //is this emissive?
-	var/color_blend_mode = "multiply"
+	var/color_blend_mode = COLOR_BLEND_MULTIPLY
 	///the body slots outside of the main slot this accessory exists in, so we can draw to those spots seperately
 	var/list/body_slots = list()
 	/// the list of external organs covered
@@ -2890,7 +2890,7 @@
 /datum/sprite_accessory/vox_quills
 	icon = 'icons/mob/species/vox/quills.dmi'
 	color_src = HAIR
-	color_blend_mode = "add"
+	color_blend_mode = COLOR_BLEND_ADD
 
 /datum/sprite_accessory/vox_quills/none
 	name = "None"
@@ -2991,7 +2991,7 @@
 /datum/sprite_accessory/vox_facial_quills
 	icon = 'icons/mob/species/vox/facial_quills.dmi'
 	color_src = FACEHAIR
-	color_blend_mode = "add"
+	color_blend_mode = COLOR_BLEND_ADD
 
 /datum/sprite_accessory/vox_facial_quills/none
 	name = "None"
@@ -3068,7 +3068,7 @@
 
 /datum/sprite_accessory/vox_body_markings
 	icon = 'icons/mob/species/vox/body_markings.dmi'
-	color_blend_mode = "add"
+	color_blend_mode = COLOR_BLEND_ADD
 
 /datum/sprite_accessory/vox_body_markings/none
 	name = "None"
@@ -3096,7 +3096,7 @@
 /datum/sprite_accessory/vox_tail_markings
 	icon = 'icons/mob/species/vox/tail_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
-	color_blend_mode = "add"
+	color_blend_mode = COLOR_BLEND_ADD
 
 /datum/sprite_accessory/vox_tail_markings/none
 	name = "None"
@@ -3117,7 +3117,7 @@
 /datum/sprite_accessory/vox_tail_markings_animated
 	icon = 'icons/mob/species/vox/tail_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
-	color_blend_mode = "add"
+	color_blend_mode = COLOR_BLEND_ADD
 
 /datum/sprite_accessory/vox_tail_markings_animated/none
 	name = "None"
