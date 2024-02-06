@@ -13,9 +13,7 @@
 	worn_icon_state = "jumpsuit"
 	mob_overlay_icon = 'icons/mob/clothing/uniform/color.dmi'
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list(
-		"Vox" = 'icons/mob/clothing/species/vox/under/color.dmi',
-	)
+	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/color.dmi')
 
 /obj/item/clothing/under/skirt/color
 	dying_key = DYE_REGISTRY_JUMPSKIRT
