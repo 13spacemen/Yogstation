@@ -2,9 +2,7 @@
 	desc = "A standard issue colored jumpsuit. Variety is the spice of life!"
 	dying_key = DYE_REGISTRY_UNDER
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list(
-		"Vox" = 'icons/mob/clothing/species/vox/under/color.dmi',
-	)
+	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/color.dmi')
 
 /obj/item/clothing/under/skirt/color
 	dying_key = DYE_REGISTRY_JUMPSKIRT
