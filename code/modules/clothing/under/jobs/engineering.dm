@@ -9,7 +9,6 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/engineering.dmi')
 
 /obj/item/clothing/under/rank/chief_engineer/skirt
 	name = "chief engineer's jumpskirt"
@@ -30,7 +29,6 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 0, ELECTRIC = 0)
 	resistance_flags = NONE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/engineering.dmi')
 
 /obj/item/clothing/under/rank/atmospheric_technician/skirt
 	name = "atmospheric technician's jumpskirt"
@@ -50,7 +48,6 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 10, FIRE = 60, ACID = 20)
 	resistance_flags = NONE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/engineering.dmi')
 
 /obj/item/clothing/under/rank/engineer/hazard
 	name = "engineer's hazard jumpsuit"
@@ -77,7 +74,6 @@
 	item_state = "robotics"
 	resistance_flags = NONE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/rnd.dmi')
 
 /obj/item/clothing/under/rank/roboticist/skirt
 	name = "roboticist's jumpskirt"
