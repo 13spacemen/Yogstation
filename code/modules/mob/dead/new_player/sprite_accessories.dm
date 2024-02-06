@@ -1280,9 +1280,7 @@
 ///////////////////////////
 /datum/sprite_accessory/underwear
 	icon = 'icons/mob/clothing/sprite_accessories/underwear.dmi'
-	sprite_sheets = list(
-	"Vox" = 'icons/mob/clothing/species/vox/underwear.dmi',
-	)
+	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/underwear.dmi')
 
 /datum/sprite_accessory/underwear/nude
 	name = "Nude"
@@ -1485,9 +1483,7 @@
 
 /datum/sprite_accessory/undershirt
 	icon = 'icons/mob/clothing/sprite_accessories/undershirt.dmi'
-	sprite_sheets = list(
-	"Vox" = 'icons/mob/clothing/species/vox/undershirt.dmi',
-	)
+	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/undershirt.dmi')
 
 /datum/sprite_accessory/undershirt/nude
 	name = "Nude"
@@ -1802,9 +1798,7 @@
 
 /datum/sprite_accessory/socks
 	icon = 'icons/mob/clothing/sprite_accessories/socks.dmi'
-	sprite_sheets = list(
-	"Vox" = 'icons/mob/clothing/species/vox/socks.dmi',
-	)
+	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/socks.dmi')
 
 /datum/sprite_accessory/socks/nude
 	name = "Nude"

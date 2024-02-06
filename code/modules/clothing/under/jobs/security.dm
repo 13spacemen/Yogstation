@@ -20,9 +20,7 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list(
-		"Vox" = 'icons/mob/clothing/species/vox/under/security.dmi',
-	)
+	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/security.dmi')
 
 /obj/item/clothing/under/rank/security/grey
 	name = "grey security jumpsuit"
@@ -92,9 +90,7 @@
 	sensor_mode = 3
 	random_sensor = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list(
-		"Vox" = 'icons/mob/clothing/species/vox/under/security.dmi',
-	)
+	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/security.dmi')
 
 /obj/item/clothing/under/rank/det/skirt
 	name = "detective's suitskirt"
@@ -138,9 +134,7 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list(
-		"Vox" = 'icons/mob/clothing/species/vox/under/security.dmi',
-	)
+	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/security.dmi')
 
 /obj/item/clothing/under/rank/head_of_security/skirt
 	name = "head of security's jumpskirt"
