@@ -7,7 +7,6 @@
 	item_state = "bar_suit"
 	alt_covers_chest = TRUE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/civilian.dmi')
 
 /obj/item/clothing/under/rank/bartender/purple
 	desc = "It looks like it has lots of flair!"
@@ -35,7 +34,6 @@
 	random_sensor = FALSE
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 15)
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/captain.dmi')
 
 /obj/item/clothing/under/rank/captain/skirt
 	name = "captain's jumpskirt"
@@ -54,7 +52,6 @@
 	icon_state = "qm"
 	item_state = "lb_suit"
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/cargo.dmi')
 
 /obj/item/clothing/under/rank/cargo/skirt
 	name = "quartermaster's jumpskirt"
@@ -76,7 +73,6 @@
 	mutantrace_variation = MUTANTRACE_VARIATION
 	alt_covers_chest = TRUE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/cargo.dmi')
 
 /obj/item/clothing/under/rank/cargotech/skirt
 	name = "cargo technician's jumpskirt"
@@ -96,7 +92,6 @@
 	item_state = "bl_suit"
 	can_adjust = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/civilian.dmi')
 
 /obj/item/clothing/under/rank/chaplain/skirt
 	name = "chaplain's jumpskirt"
@@ -114,7 +109,6 @@
 	icon_state = "chef"
 	alt_covers_chest = TRUE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/civilian.dmi')
 
 /obj/item/clothing/under/rank/chef/skirt
 	name = "cook's skirt"
@@ -132,7 +126,6 @@
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/civilian.dmi')
 
 /obj/item/clothing/under/rank/blueclown
 	name = "blue clown suit"
@@ -201,7 +194,6 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/civilian.dmi')
 
 /obj/item/clothing/under/rank/head_of_personnel/skirt
 	name = "head of personnel's jumpskirt"
@@ -221,7 +213,6 @@
 	item_state = "g_suit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 5, RAD = 0, FIRE = 0, ACID = 0)
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/civilian.dmi')
 
 /obj/item/clothing/under/rank/hydroponics/skirt
 	name = "botanist's jumpskirt"
@@ -239,7 +230,6 @@
 	icon_state = "janitor"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 10, RAD = 0, FIRE = 0, ACID = 0)
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/civilian.dmi')
 
 /obj/item/clothing/under/rank/janitor/skirt
 	name = "janitor's jumpskirt"
@@ -360,7 +350,6 @@
 	item_state = "red_suit"
 	can_adjust = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/civilian.dmi')
 
 /obj/item/clothing/under/rank/curator/skirt
 	name = "sensible suitskirt"
@@ -384,7 +373,6 @@
 	icon_state = "mime"
 	item_state = "mime"
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/civilian.dmi')
 
 /obj/item/clothing/under/rank/mime/skirt
 	name = "mime's skirt"
@@ -424,7 +412,6 @@
 	item_state = "miner"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 0, WOUND = 10)
 	mutantrace_variation = MUTANTRACE_VARIATION
-	sprite_sheets = list("Vox" = 'icons/mob/clothing/species/vox/under/cargo.dmi')
 
 /obj/item/clothing/under/rank/miner/lavaland
 	desc = "A green uniform for operating in hazardous environments."
