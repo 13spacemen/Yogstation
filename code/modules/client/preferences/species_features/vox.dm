@@ -41,7 +41,13 @@
 	data[CHOICED_PREFERENCE_DISPLAY_NAMES] = capitalized_skin_tones
 	var/list/skin_tones_to_hex = list(
 		"green" = "#00ff00",
-		"crimson" = "#ff0000"
+		"crimson" = "#ff0000",
+		"plum" = "#5B3256",
+		"azure" = "#0b322a",
+		"emerald" = "#024716",
+		"brown" = "#592810",
+		"grey" = "#2b3326",
+		"nebula" = "#282b63"
 	)
 	var/list/to_hex = list()
 	for (var/choice in get_choices())

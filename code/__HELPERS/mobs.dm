@@ -273,7 +273,13 @@ GLOBAL_LIST_INIT(skin_tone_names, list(
 
 GLOBAL_LIST_INIT(vox_skin_tones, sortList(list(
 	"green",
-	"crimson"
+	"crimson",
+	"nebula",
+	"azure",
+	"emerald",
+	"brown",
+	"plum",
+	"grey"
 	)))
 
 GLOBAL_LIST_EMPTY(species_list)
