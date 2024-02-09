@@ -2886,6 +2886,10 @@
 	name = "plum"
 	icon_state = "plum"
 
+/datum/sprite_accessory/vox_tails/mossy
+	name = "mossy"
+	icon_state = "mossy"
+
 /datum/sprite_accessory/tails_animated/vox
 	icon = 'icons/mob/species/vox/tails.dmi'
 	color_src = NONE
@@ -2921,6 +2925,10 @@
 /datum/sprite_accessory/tails_animated/vox/plum
 	name = "plum"
 	icon_state = "plum"
+
+/datum/sprite_accessory/tails_animated/vox/mossy
+	name = "mossy"
+	icon_state = "mossy"
 
 /datum/sprite_accessory/vox_body_markings
 	icon = 'icons/mob/species/vox/body_markings.dmi'

@@ -279,7 +279,8 @@ GLOBAL_LIST_INIT(vox_skin_tones, sortList(list(
 	"emerald",
 	"brown",
 	"plum",
-	"grey"
+	"grey",
+	"mossy"
 	)))
 
 GLOBAL_LIST_EMPTY(species_list)
