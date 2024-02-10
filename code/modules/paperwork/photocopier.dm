@@ -98,16 +98,14 @@
 					to_chat(usr, span_notice("You feel kind of silly, copying [ass == usr ? "your" : ass][ass == usr ? "" : "\'s"] ass with [ass == usr ? "your" : "[ass.p_their()]"] clothes on.") ) // '
 					break
 				else if(toner >= 5 && !busy && check_ass()) //You have to be sitting on the copier and either be a xeno or a human without clothes on.
-					if(isalienadult(ass) || istype(ass, /mob/living/simple_animal/hostile/alien)) //Xenos have their own asses, thanks to Pybro.
-						temp_img = icon('icons/ass/assalien.png')
+					var/butt_icon = 'icons/mob/butts.dmi'
+					if(isalienadult(ass)) //Xenos have their own asses, thanks to Pybro.
+						temp_img = icon(butt_icon, "xeno")
 					else if(ishuman(ass)) //Suit checks are in check_ass
-						temp_img = icon(ass.gender == FEMALE ? 'icons/ass/assfemale.png' : 'icons/ass/assmale.png')
-						if(iscatperson(ass))
-							temp_img = icon('icons/ass/asscat.png')
-						if(isvox(ass))
-							temp_img = icon('icons/ass/assvox.png')
+						var/mob/living/carbon/human/butt_copier = ass
+						temp_img = icon(butt_icon, butt_copier.gender == FEMALE ? butt_copier.dna.species.butt_sprites["female"] : butt_copier.dna.species.butt_sprites["male"])
 					else if(isdrone(ass)) //Drones are hot
-						temp_img = icon('icons/ass/assdrone.png')
+						temp_img = icon(butt_icon, "drone")
 					else
 						break
 					busy = TRUE

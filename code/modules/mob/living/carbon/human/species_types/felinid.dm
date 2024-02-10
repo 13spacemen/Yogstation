@@ -3,7 +3,8 @@
 	name = "Felinid Human"
 	id = "felinid"
 	limbs_id = "human"
-	attack_verb = "slash"
+	attack_verbs = list("slash")
+	attack_effect = ATTACK_EFFECT_SLASH
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 
@@ -19,7 +20,7 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	swimming_component = /datum/component/swimming/felinid
 	species_language_holder = /datum/language_holder/felinid
-
+	butt_sprites = list(male = "felinid", female = "felinid")
 	screamsound = list('sound/voice/feline/scream1.ogg', 'sound/voice/feline/scream2.ogg', 'sound/voice/feline/scream3.ogg')
 
 	smells_like = "hairballs and litter"

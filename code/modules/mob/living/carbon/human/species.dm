@@ -139,6 +139,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/cough_sound
 	var/sneeze_sound
 	var/husk_color = "#A6A6A6"
+	var/list/survival_box_replacements = list(items_to_delete = list(), new_items = list())
+	var/list/butt_sprites = list(male = "male", female = "female")
+	/// The visual effect of the attack.
+	var/attack_effect = ATTACK_EFFECT_PUNCH
 	///is a flying species, just a check for some things
 	var/flying_species = FALSE
 	///the actual flying ability given to flying species
@@ -158,7 +162,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///biotypes, used for viruses and the like
 	var/list/inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	/// punch-specific attack verb
-	var/attack_verb = "punch"
+	var/attack_verbs = list("punch")
 	///the melee attack sound
 	var/sound/attack_sound = 'sound/weapons/punch1.ogg'
 	///the swing and miss sound
@@ -325,12 +329,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 /datum/species/proc/has_toes()
 	return FALSE
-
-/datum/species/proc/on_husk()
-	return
-
-/datum/species/proc/on_husk_cure()
-	return
 
 /**
  * Corrects organs in a carbon, removing ones it doesn't need and adding ones it does.
@@ -1050,6 +1048,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		H.update_body_parts()
 	if(not_digitigrade && (DIGITIGRADE in species_traits)) //Curse is lifted
 		species_traits -= DIGITIGRADE
+
 	if(!bodyparts_to_add)
 		return
 
@@ -1795,27 +1794,20 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		return TRUE
 	else
 
-		var/atk_verb = user.dna.species.attack_verb
+		var/atk_verb = pick(user.dna.species.attack_verbs)
+		var/atk_effect = user.dna.species.attack_effect
 		if(!(target.mobility_flags & MOBILITY_STAND))
-			atk_verb = ATTACK_EFFECT_KICK
+			atk_verb = "kick"
+			atk_effect = ATTACK_EFFECT_KICK
 
-		switch(atk_verb)//this code is really stupid but some genius apparently made "claw" and "slash" two attack types but also the same one so it's needed i guess
-			if(ATTACK_EFFECT_KICK)
-				user.do_attack_animation(target, ATTACK_EFFECT_KICK)
-			if(ATTACK_EFFECT_SLASH, ATTACK_EFFECT_CLAW)//smh
-				user.do_attack_animation(target, ATTACK_EFFECT_CLAW)
-			if(ATTACK_EFFECT_SMASH)
-				user.do_attack_animation(target, ATTACK_EFFECT_SMASH)
-			else
-				user.do_attack_animation(target, ATTACK_EFFECT_PUNCH)
-
+		user.do_attack_animation(target, atk_effect)
 		var/damage = rand(user.get_punchdamagelow(), user.get_punchdamagehigh())
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
 
 		var/miss_chance = 100//calculate the odds that a punch misses entirely. considers stamina and brute damage of the puncher. punches miss by default to prevent weird cases
 		if(user.get_punchdamagelow())
-			if(atk_verb == ATTACK_EFFECT_KICK) //kicks never miss (provided your species deals more than 0 damage)
+			if(atk_effect == ATTACK_EFFECT_KICK) //kicks never miss (provided your species deals more than 0 damage)
 				miss_chance = 0
 			else
 				miss_chance = min((user.get_punchdamagelow()/user.get_punchdamagehigh()) + user.getStaminaLoss() + (user.getBruteLoss()*0.5), 100) //old base chance for a miss + various damage. capped at 100 to prevent weirdness in prob()
@@ -1842,7 +1834,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			target.dismembering_strike(user, affecting.body_zone)
 
 		var/attack_direction = get_dir(user, target)
-		if(atk_verb == ATTACK_EFFECT_KICK)//kicks deal 1.5x raw damage
+		if(atk_effect == ATTACK_EFFECT_KICK)//kicks deal 1.5x raw damage
 			target.apply_damage(damage*1.5, user.dna.species.attack_type, affecting, armor_block, attack_direction = attack_direction)
 			log_combat(user, target, "kicked")
 		else//other attacks deal full raw damage + 1.5x in stamina damage
@@ -2537,6 +2529,13 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 /datum/species/proc/get_eyes_static(mob/living/carbon/person_to_check)
 	return
+
+/datum/species/proc/survival_box_replacement(obj/item/storage/box/survival_box)
+	for(var/item as anything in survival_box_replacements["items_to_delete"])
+		var/obj/item/item_to_delete = locate(item) in survival_box
+		qdel(item_to_delete)
+	for(var/item as anything in survival_box_replacements["new_items"])
+		new item(survival_box)
 
 /datum/species/proc/eat_text(fullness, eatverb, obj/O, mob/living/carbon/C, mob/user)
 	. = TRUE
