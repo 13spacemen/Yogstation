@@ -975,11 +975,13 @@
 			else
 				limb.icon_state = "[species_id]_[body_zone]"
 		else
-			limb.icon = 'yogstation/icons/mob/human_parts.dmi' // yogs -- use yogs icon instead of tg, gorilla people
+			limb.icon = limb_icon_file || 'yogstation/icons/mob/human_parts.dmi' // yogs -- use yogs icon instead of tg, gorilla people
 			if(should_draw_gender)
 				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
 			else
 				limb.icon_state = "[species_id]_[body_zone]"
+		if(limb_icon_variant)
+			limb.icon_state += "_[limb_icon_variant]"
 		if(should_draw_yogs) //yogs start
 			limb.icon = 'yogstation/icons/mob/mutant_bodyparts.dmi'
 			if(should_draw_gender)
@@ -987,23 +989,17 @@
 			else
 				limb.icon_state = "[species_id]_[body_zone]" //yogs end
 		if(aux_zone)
-			var/aux_icon_name = "[species_id]_[aux_zone]"
-			if(icon_exists(limb.icon, "[aux_icon_name]_[limb_icon_variant]"))
-				aux_icon_name += "_[limb_icon_variant]"
+			var/aux_icon_name = "[species_id]_[aux_zone]_[limb_icon_variant]"
+			if(!icon_exists(limb.icon, "[aux_icon_name]"))
+				aux_icon_name = "[species_id]_[aux_zone]"
 			aux = image(limb.icon, aux_icon_name, -aux_layer, image_dir)
 			. += aux
-		if(limb_icon_file)
-			limb.icon = limb_icon_file
-			if(aux)
-				aux.icon = limb_icon_file
 		if(has_static_sprite_part)
-			var/limb_static_icon_name = "[limb.icon_state]_static"
-			if(icon_exists(limb.icon, "[limb_static_icon_name]_[limb_icon_variant]"))
+			var/limb_static_icon_name = "[species_id]_[body_zone]_static"
+			if(limb_icon_variant in id_to_species.get_special_statics())
 				limb_static_icon_name += "_[limb_icon_variant]"
 			limb_static = image(limb.icon, limb_static_icon_name, limb.layer, limb.dir)
 			. += limb_static
-		if(limb_icon_variant)
-			limb.icon_state += "_[limb_icon_variant]"
 	else
 		limb.icon = icon
 		if(should_draw_gender)
