@@ -104,19 +104,13 @@
 
 	var/damage = rand(A.get_punchdamagelow(), A.get_punchdamagehigh())
 
-	var/atk_verb = A.dna.species.attack_verb
+	var/atk_verb = pick(A.dna.species.attack_verbs)
+	var/atk_effect = A.dna.species.attack_effect
 	if(!(D.mobility_flags & MOBILITY_STAND))
 		atk_verb = "kick"
+		atk_effect = ATTACK_EFFECT_KICK
 
-	switch(atk_verb)
-		if("kick")
-			A.do_attack_animation(D, ATTACK_EFFECT_KICK)
-		if("slash")
-			A.do_attack_animation(D, ATTACK_EFFECT_CLAW)
-		if("smash")
-			A.do_attack_animation(D, ATTACK_EFFECT_SMASH)
-		else
-			A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
+	A.do_attack_animation(D, atk_effect)
 
 	if(!damage)
 		playsound(D.loc, A.dna.species.miss_sound, 25, 1, -1)
