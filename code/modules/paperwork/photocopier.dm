@@ -103,7 +103,7 @@
 						temp_img = icon(butt_icon, "xeno")
 					else if(ishuman(ass)) //Suit checks are in check_ass
 						var/mob/living/carbon/human/butt_copier = ass
-						temp_img = icon(butt_icon, (butt_copier.gender == FEMALE && islist(butt_copier.dna.species.butt_sprites) ? butt_copier.dna.species.butt_sprites["female"] : butt_copier.dna.species.butt_sprites["male"] || butt_copier.dna.species.butt_sprites))
+						temp_img = icon(butt_icon, (butt_copier.gender == FEMALE ? butt_copier.dna.species.butt_sprites["female"] : butt_copier.dna.species.butt_sprites["male"]))
 					else if(isdrone(ass)) //Drones are hot
 						temp_img = icon(butt_icon, "drone")
 					else
