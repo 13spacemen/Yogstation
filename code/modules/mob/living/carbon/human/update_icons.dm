@@ -174,7 +174,7 @@ There are several things that need to be remembered:
 				icon_file = 'icons/mob/clothing/uniform/digitigrade.dmi'
 
 		if(!icon_exists(icon_file, target_overlay)) //Sanity check.
-			icon_file = 'icons/mob/clothing/uniform/uniform.dmi'
+			icon_file = DEFAULT_UNIFORM_FILE
 			handled_by_bodytype = FALSE
 
 		var/mutable_appearance/uniform_overlay
