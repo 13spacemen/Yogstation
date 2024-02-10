@@ -143,6 +143,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/cough_sound
 	var/sneeze_sound
 	var/husk_color = "#A6A6A6"
+	var/list/survival_box_replacements = list(items_to_delete = list(), new_items = list())
 	/// The visual effect of the attack.
 	var/attack_effect = ATTACK_EFFECT_PUNCH
 	///is a flying species, just a check for some things
@@ -164,7 +165,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///biotypes, used for viruses and the like
 	var/list/inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	/// punch-specific attack verb
-	var/attack_verb = "punch"
+	var/attack_verbs = list("punch")
 	///the melee attack sound
 	var/sound/attack_sound = 'sound/weapons/punch1.ogg'
 	///the swing and miss sound
@@ -335,12 +336,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 /datum/species/proc/has_toes()
 	return FALSE
-
-/datum/species/proc/on_husk()
-	return
-
-/datum/species/proc/on_husk_cure()
-	return
 
 /// Sprite to show for photocopying mob butts
 /datum/species/proc/get_butt_sprite(mob/living/carbon/human/human)
@@ -1067,7 +1062,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		H.update_body_parts()
 	if(not_digitigrade && (DIGITIGRADE in species_traits)) //Curse is lifted
 		species_traits -= DIGITIGRADE
-
 	if(!bodyparts_to_add)
 		return
 
@@ -1818,7 +1812,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		return TRUE
 	else
 
-		var/atk_verb = user.dna.species.attack_verb
+		var/atk_verb = pick(user.dna.species.attack_verbs)
 		var/atk_effect = user.dna.species.attack_effect
 		if(!(target.mobility_flags & MOBILITY_STAND))
 			atk_verb = "kick"
@@ -2552,6 +2546,13 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 /datum/species/proc/get_eyes_static(mob/living/carbon/person_to_check)
 	return
+
+/datum/species/proc/survival_box_replacement(obj/item/storage/box/survival_box)
+	for(var/item as anything in survival_box_replacements["items_to_delete"])
+		var/obj/item/item_to_delete = locate(item) in survival_box
+		qdel(item_to_delete)
+	for(var/item as anything in survival_box_replacements["new_items"])
+		new item(survival_box)
 
 /datum/species/proc/eat_text(fullness, eatverb, obj/O, mob/living/carbon/C, mob/user)
 	. = TRUE

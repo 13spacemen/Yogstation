@@ -5,7 +5,6 @@
 	item_state = "gy_suit"
 	can_adjust = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
-
 /obj/item/clothing/under/yogs/rank/clerk
 	desc = "Oh, look it comes with its own vest."
 	name = "clerk's uniform"
