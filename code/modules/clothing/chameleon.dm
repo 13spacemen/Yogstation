@@ -219,13 +219,16 @@
 	build_all_button_icons()
 
 /datum/action/item_action/chameleon/change/proc/update_item(obj/item/picked_item, obj/item/target = src.target) //yogs -- add support for cham hardsuits
-	target.name = initial(picked_item.name)
-	target.desc = initial(picked_item.desc)
-	target.icon_state = initial(picked_item.icon_state)
+	var/obj/item/the_picked_item = new picked_item(null)
+	target.name = the_picked_item.name
+	target.desc = the_picked_item.desc
+	target.icon_state = the_picked_item.icon_state
 	if(isitem(target))
 		var/obj/item/I = target
-		I.item_state = initial(picked_item.item_state)
-		I.mob_overlay_icon = initial(picked_item.mob_overlay_icon)
+		I.item_state = the_picked_item.item_state
+		I.mob_overlay_icon = the_picked_item.mob_overlay_icon
+		I.icon_override = the_picked_item.icon_override
+		I.sprite_sheets = the_picked_item.sprite_sheets
 		if(istype(I, /obj/item/clothing) && istype(picked_item, /obj/item/clothing))
 			var/obj/item/clothing/CL = I
 			var/obj/item/clothing/PCL = picked_item
