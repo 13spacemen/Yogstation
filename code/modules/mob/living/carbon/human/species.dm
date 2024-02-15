@@ -139,7 +139,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/cough_sound
 	var/sneeze_sound
 	var/husk_color = "#A6A6A6"
-	var/list/survival_box_replacements = list(items_to_delete = list(), new_items = list())
+	var/list/survival_box_replacements = list(/*items_to_delete= list(), new_items= list()*/)
 	var/list/butt_sprites = list(male = "male", female = "female")
 	var/creampie_id = "creampie_human"
 	/// The visual effect of the attack.

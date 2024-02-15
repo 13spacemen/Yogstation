@@ -310,8 +310,8 @@
 	mask = /obj/item/clothing/mask/gas/explorer
 	shoes = /obj/item/clothing/shoes/bhop
 	uniform = /obj/item/clothing/under/rank/miner/lavaland
+	box = /obj/item/storage/box/survival/mining
 	backpack_contents = list(
-		/obj/item/storage/box/survival_mining=1,
 		/obj/item/crusher_trophy/demon_claws=1,
 		/obj/item/crusher_trophy/watcher_wing=1,
 		/obj/item/reagent_containers/autoinjector/medipen/survival=3,
