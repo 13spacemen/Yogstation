@@ -550,6 +550,17 @@
 		// Might need re-wording.
 		to_chat(user, span_alert("There is no exposed flesh or thin material [above_neck(target_zone) ? "on [p_their()] head" : "on [p_their()] body"]."))
 
+/mob/living/carbon/human/get_footprint_sprite()
+	var/obj/item/bodypart/l_leg/left_leg = get_bodypart(BODY_ZONE_L_LEG)
+	var/obj/item/bodypart/r_leg/right_leg = get_bodypart(BODY_ZONE_R_LEG)
+	var/species_id
+	var/datum/species/species
+	if(left_leg?.species_id == right_leg?.species_id)
+		species_id = left_leg.species_id
+		var/species_type = GLOB.species_list[species_id]
+		species = new species_type()
+	return species?.get_footprint_sprite() || FOOTPRINT_SPRITE_SHOES
+
 /mob/living/carbon/human/assess_threat(judgement_criteria, lasercolor = "", datum/callback/weaponcheck=null)
 	if(judgement_criteria & JUDGE_EMAGGED)
 		return 10 //Everyone is a criminal!
