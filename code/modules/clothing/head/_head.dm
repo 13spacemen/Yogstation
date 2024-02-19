@@ -10,7 +10,7 @@
 	/// Can land on someones head
 	var/hattable = TRUE
 	dynamic_hair_suffix = "+generic"
-	sprite_sheets = list("Vox" = VOX_HEAD_FILE)
+	sprite_sheets = list(SPECIES_VOX = VOX_HEAD_FILE)
 
 /obj/item/clothing/head/Initialize(mapload)
 	. = ..()
@@ -25,6 +25,8 @@
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damagedhelmet")
 		if(HAS_BLOOD_DNA(src))
 			var/mutable_appearance/bloody_helmet = mutable_appearance('icons/effects/blood.dmi', "helmetblood")
+			if(species_fitted && icon_exists(bloody_helmet.icon, "helmetblood_[species_fitted]")) 
+				bloody_helmet.icon_state = "helmetblood_[species_fitted]"
 			bloody_helmet.color = get_blood_dna_color(return_blood_DNA())
 			. += bloody_helmet
 			
