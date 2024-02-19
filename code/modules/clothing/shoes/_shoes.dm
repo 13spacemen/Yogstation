@@ -7,7 +7,7 @@
 
 	body_parts_covered = FEET
 	slot_flags = ITEM_SLOT_FEET
-	sprite_sheets = list("Vox" = VOX_SHOES_FILE)
+	sprite_sheets = list(SPECIES_VOX = VOX_SHOES_FILE)
 	slowdown = SHOES_SLOWDOWN
 	var/footprint_sprite = FOOTPRINT_SPRITE_SHOES
 	var/offset = 0
@@ -42,8 +42,9 @@
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damagedshoe")
 		if(HAS_BLOOD_DNA(src))
-			var/mutable_appearance/bloody_shoes
-			bloody_shoes = mutable_appearance('icons/effects/blood.dmi', "shoeblood")
+			var/mutable_appearance/bloody_shoes = mutable_appearance('icons/effects/blood.dmi', "shoeblood")
+			if(species_fitted && icon_exists(bloody_shoes.icon, "shoeblood_[species_fitted]")) 
+				bloody_shoes.icon_state = "shoeblood_[species_fitted]"
 			bloody_shoes.color = get_blood_dna_color(return_blood_DNA())
 			. += bloody_shoes
 
