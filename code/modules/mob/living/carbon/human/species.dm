@@ -977,7 +977,11 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if("preternis_eye" in mutant_bodyparts)
 		if((H.wear_mask && (H.wear_mask.flags_inv & HIDEEYES)) || (H.head && (H.head.flags_inv & HIDEEYES)) || !HD)
 			bodyparts_to_add -= "preternis_eye"
-
+	
+	if("preternis_core" in mutant_bodyparts)
+		if(H.w_uniform || H.wear_suit)
+			bodyparts_to_add -= "preternis_core"
+	
 	if("pod_hair" in mutant_bodyparts)
 		if((H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)) || (H.head && (H.head.flags_inv & HIDEHAIR)) || !HD || HD.status == BODYPART_ROBOTIC)
 			bodyparts_to_add -= "pod_hair"
