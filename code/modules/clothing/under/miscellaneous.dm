@@ -73,6 +73,7 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 	mutantrace_variation = MUTANTRACE_VARIATION
+	sprite_sheets = list("GAGS_sprite" = list(SPECIES_VOX))
 
 /obj/item/clothing/under/rank/prisoner/skirt
 	name = "prison jumpskirt"
@@ -83,6 +84,7 @@
 	can_adjust = FALSE
 	fitted = FEMALE_UNIFORM_TOP
 	mutantrace_variation = NO_MUTANTRACE_VARIATION
+	sprite_sheets = list("GAGS_sprite" = list(SPECIES_VOX))
 
 /obj/item/clothing/under/rank/mailman
 	name = "mailman's jumpsuit"
